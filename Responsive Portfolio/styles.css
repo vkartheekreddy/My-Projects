@@ -1,0 +1,939 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'josefin sans',sans-serif
+}
+
+:root{
+    --bg-color:#191f36;
+    --snd-bg-color:#262B40;
+    --text-color:#fff;
+    --main-color:#59B2F4;
+}
+
+html{
+    font-size: 63.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: default;
+}
+
+.navbar a{
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+
+span{
+    color: var(--main-color);
+}
+
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p{
+    line-height: 2.2rem;
+    font-weight: 500;
+    font-size: 3.2rem;
+}
+
+.home-img img{
+    width: 30vw;
+    height: 65vh;
+    margin-right: -3rem;
+    border-radius: 50%;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--snd-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--snd-bg-color);
+}
+
+.about-img img{
+    width: 30vw;
+    height: 65vh;
+    border-radius: 50%;
+    /* margin-left: -5rem; */
+    position: relative;
+    bottom: 100px;
+    right: 40px;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.3rem;
+    margin-bottom: 16rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+    position: relative;
+    top: -1rem;
+    left: 5rem;
+}
+
+
+.about-content h3 {
+    font-size: 3.4rem;
+    position: relative;
+    bottom: 16rem;
+    color: var(--main-color);
+}
+
+
+.about-content p {
+    font-size: 1.4rem;
+    margin: 2rem 0 3rem;
+    line-height: 2.1rem;
+    position: relative;
+    bottom: 17rem;
+}
+
+.about-content .btn {
+    position: relative;
+    bottom: 18rem;
+}
+
+/* SERVICES SECTION */
+
+.services h2 {
+    position: relative;
+    bottom: 2rem;
+}
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+    bottom: 15rem;
+}
+.services-container .services-box {
+    flex: 1 1 30rem;
+    background: var(--snd-bg-color);
+    padding: 2rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .3rem solid var(--bg-color);
+    transition: .5s ease;
+    width: 300px;
+    height: 400px;
+}
+.services-container .services-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+.services-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+    position: relative;
+    bottom: 2rem;
+}
+
+.services-box #icon-1,#icon-2 {
+    padding: 2.4rem;
+
+} 
+
+.services-box h3 {
+    font-size: 2.6rem;
+    position: relative;
+    bottom: 2rem;
+}
+.services-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    line-height: 2.2rem;
+}
+#MERN {
+    position: relative;
+    top: .5rem;
+}
+#MERN-HEADING {
+    position: relative;
+    top: 1rem;
+}
+
+#MERN-PARA {
+    position: relative;
+    top: 1.2rem;
+}
+
+#FRONTEND-PARA {
+    position: relative;
+    bottom: 2rem;
+
+}
+
+#FRONTEND-BTN {
+    position: relative;
+    bottom: 3rem;
+}
+
+/* PROJECTS SECTION */
+
+#projects-heading {
+    position: relative;
+    bottom: 2rem;
+} 
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+    bottom: 17rem;
+}
+
+.projects-container .projects-box {
+    flex: 1 1 30rem;
+    background: var(--snd-bg-color);
+    padding: 2rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .3rem solid var(--bg-color);
+    transition: .5s ease;
+    width: 300px;
+    height: 430px;
+}
+
+.projects-container .projects-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.projects-heading {
+
+   font-size: 2.6rem;
+} 
+
+.projects-para {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    line-height: 2.2rem;
+}
+
+#portfolio-btn {
+    position: relative;
+    bottom: 1rem;
+
+} 
+
+#food-btn {
+    position: relative;
+    bottom: ;
+}
+
+#food-para {
+    position: relative;
+    line-height: 2.3rem;
+}
+
+#ecommerce-para {
+    position: relative;
+    top: 2.4rem;
+}
+
+#ecommerce-btn {
+    position: relative;
+    top: 3.5rem;
+}
+
+
+/* CONTACT SECTION  */
+
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--snd-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea  {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--snd-bg-color);
+}
+
+.footer-text {
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+}
+
+
+.footer-iconTop {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 1rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--snd-bg-color);
+}
+
+.repeat-text {
+    color: var(--main-color);
+}
+
+
+
+
+ /* RESPONSIVE DESIGN */
+
+@media (max-width: 1200px)  {
+    html {
+        font-size: 55%;
+    }
+    .home-img img {
+        position: relative;
+        left: 2rem;
+        object-fit: fill;
+    }
+
+    /* ABOUT SECTION */
+
+    .about-img img {
+        position: relative;
+        bottom: 2rem;
+    }
+    .about-content {
+        position: relative;
+        top: 3rem;
+    }
+
+    .about-content p {
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+    }
+
+    /* SERVICES SECTION  */
+
+    #FRONTEND-HEADING {
+        font-size: 3rem;
+    }
+
+    #FRONTEND-PARA {
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+    }
+
+    #BACKEND-HEADING {
+        font-size: 3rem;
+    }
+
+    #BACKEND-PARA {
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        position: relative;
+        bottom: 2.2rem;
+    }
+
+    #BACKEND-BTN {
+        position: relative;
+        bottom: 2.9rem;
+    }
+
+    #MERN-HEADING {
+        font-size: 3rem;
+        position: relative;
+        top: 2.4rem;
+    }
+
+    #MERN-PARA {
+        font-size: 1.8rem;
+        position: relative;
+        top: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+
+
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3%;
+    }
+
+    .skills {
+        padding: 7rem;
+    }
+
+    .projects {
+        padding-bottom: 7rem;
+    }
+
+
+    .contact {
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-content {
+        order: 2;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-img img {
+        width: 90vw;
+        margin-top: 4rem;
+    }
+
+    .skills h2 {
+        margin-bottom: 3rem;
+    }
+
+    .projects h2 {
+        margin-bottom: 3rem;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:451px) and(max-width: 617px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-img img {
+        width: 80vw;
+        margin-top: 8rem;
+    }
+
+    .about-img img {
+        width: 100vw;
+        margin-top: 4rem;
+    }
+
+    #home-btn {
+        position: relative;
+        right: 20rem;
+    }
+}
+
+
+
+/* RESPONSIVE DESIGN */ 
+@media (max-width: 450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        position: fixed;
+        top: 0px;z-index: 100;
+    }
+
+    /* HOME-CONTENT */
+
+    .home-img img {
+        margin-right: 2rem;
+        object-fit: fill;
+        width: 65vw;
+    }
+
+    .home-content h3,h1,p{
+        text-align: center;
+        position: relative;
+        top: 2rem;
+
+    }
+
+    .home-content p {
+        font-size: 1.6rem;
+    }
+
+    .social-media {
+        text-align: center;
+    }
+
+
+
+    #home-btn {
+        position: relative;
+        left: 16rem;
+    }
+
+    .social-media a:hover {
+        background: var(--main-color);
+        color: var(--snd-bg-color);
+        box-shadow: 0 0 1rem var(--main-color);
+    }
+
+    #home-btn:hover {
+        box-shadow: none;
+
+    }
+
+    #menu-icon {
+        position: relative;
+        right: 24rem;
+    }
+
+    /* ABOUT-CONTENT */
+
+    #about {
+        background-color:#191f36;
+    }
+
+    .about-img img {
+        width: 68vw;
+        position: relative;
+        left: 1rem;
+        bottom: 3rem;
+
+    }
+
+    .about-content h2{
+        position: relative;
+        left: 15rem;
+    }
+
+    .about-content h3 {
+        position: relative;
+        left: 7rem;
+    }
+
+   
+
+   /* .about-content #about-para { */
+
+    
+   /* } */
+
+   #about-btn {
+    position: relative;
+    top: 4rem;
+    left: 19rem;
+   }
+
+   /* SERVICE-SECTION */
+
+   #FRONTEND-HEADING {
+    font-size: 4rem;
+   }
+
+   #FRONTEND-PARA {
+    font-size: 2rem;
+    line-height: 4rem;
+   }
+
+   #FRONTEND-BTN {
+    position: relative;
+    top: 3rem;
+   }
+
+   #BACKEND-HEADING {
+    font-size: 4rem;
+   }
+
+   #BACKEND-PARA {
+    font-size: 2rem;
+    line-height: 4rem;
+   }
+
+   #BACKEND-BTN {
+    position: relative;
+    top: 3rem;
+   }
+
+   #MERN-HEADING {
+    font-size: 4rem;
+   }
+
+   #MERN-PARA {
+    font-size: 2rem;
+    line-height: 4rem;
+   }
+
+   #MERN-BTN {
+    position: relative;
+    top: 2rem;
+   }
+
+   /* PROJECTS-SECTION */
+
+   #projects-heading {
+
+    position: relative;
+    bottom: 20rem;
+
+   }
+
+   .projects-heading {
+    font-size: 4rem;
+   }
+
+   .projects-para {
+    font-size: 2rem;
+    line-height: 3.5rem;
+   }
+
+   #portfolio-btn{
+    position: relative;
+    top: 1rem;
+   }
+
+   #food-para {
+    line-height: 4rem;
+   }
+
+   /* CONTACT-SECTION */
+
+   .contact {
+    position: relative;
+    bottom: 24rem;
+   }
+   .contact form .input-box input {
+    width: 100%;
+}
+
+   /* FOOTER-SECTION */
+
+   .footer {
+    height: 110vh;
+    width: 100vw;
+    position: relative;
+    bottom: 28rem;
+   }
+
+   .footer-text {
+    position: relative;
+    left: 3rem;
+   }
+
+   .footer-iconTop {
+    position: relative;
+    right: 10rem;
+    top: 1.7rem;
+   }
+
+
+
+}
+
+@media (min-width: 769px) and (max-width: 990px) {
+
+   .about-img img {
+    position: relative;
+    left: .1rem;
+   }
+
+   #MERN-BTN {
+    position: relative;
+    top: 2.5rem;
+   }
+
+}
+
+@media (max-width: 768px) {
+    .home-img img {
+        width: 55vw;
+    }
+
+    .home-content h3,h1,p{
+        text-align: center;
+        position: relative;
+        top: 2rem;
+
+    }
+
+    .home-content p {
+        font-size: 2rem;
+        position: relative;
+        left: 3rem;
+        line-height: 4rem;
+    }
+
+    .social-media {
+        text-align: center;
+    }
+
+
+
+    #home-btn {
+        position: relative;
+        left: 29.5rem;
+    }
+
+    .about-img img {
+        width: 50vw;
+    }
+
+   .about-content .heading {
+
+    position: relative;
+    left: 22rem;
+
+   }
+
+   .about-content  h3 {
+    position: relative;
+    left: 15rem;
+   }
+
+   #about-btn {
+    position: relative;
+    top:1rem;
+    left: 33rem;
+   }
+
+   .services-box .btn {
+    position: relative;
+    top: 4rem;
+   }
+
+   .projects-box .btn {
+    position: relative;
+    top: 4rem;
+   }
+
+   #projects-heading {
+    position: relative;
+    bottom: 18rem;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+  
